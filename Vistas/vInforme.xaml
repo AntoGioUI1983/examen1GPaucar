@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen1GPaucar.Vistas.vInforme"
+              BackgroundColor="WhiteSmoke">
+    <VerticalStackLayout>
+        <StackLayout BackgroundColor="LightBlue" Padding="20">
+            <Image Source="fondo.png"
+       HeightRequest="100"/>
+            <Label 
+         Text="Registro de Estudiantes "
+        FontSize="Medium"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"
+         TextColor="Black"/>
+
+           
+        </StackLayout>
+
+
+        <Label 
+        Text="Estudiante "
+        FontSize="Medium"
+        VerticalOptions="Start" 
+       
+        TextColor="Black"/>
+
+
+        <Label 
+         x:Name="txtNombre"
+         FontSize="Medium"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center"
+        TextColor="Black"/>
+
+
+        <Label 
+        Text="Apellido "
+        FontSize="Medium"
+        VerticalOptions="Start" 
+
+        TextColor="Black"/>
+
+
+        <Label 
+        x:Name="txtApellido"
+        FontSize="Medium"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"
+        TextColor="Black"/>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

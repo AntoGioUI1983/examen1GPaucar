@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen1GPaucar.Vistas.vLogin"
+             BackgroundColor="WhiteSmoke"
+            >
+    <VerticalStackLayout>
+        <Label 
+            Text="Pagina de Inicio"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <StackLayout BackgroundColor="LightBlue" Padding="20">
+            <Image Source="fondo.png"
+             HeightRequest="100"/>
+        </StackLayout>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario:"
+                   FontSize="Micro"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black" 
+                     Grid.Row="0"
+                Grid.Column="1"/>
+
+
+            <Entry x:Name="txtUsuario" 
+               Placeholder="Digite Usuario"
+               MaxLength="30"
+               TextColor="Black"
+               Grid.Row="0"
+               Grid.Column="2"/>
+
+
+            <Label Text="Contraseña :"
+                    FontSize="Micro"
+                    VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                    TextColor="Black" 
+                    Grid.Row="1"
+                   Grid.Column="1"/>
+
+
+            <Entry x:Name="txtContrasena" 
+                     Placeholder="Digite Contraseña"
+                     IsPassword="True"
+                     TextColor="Black"
+                     MaxLength="30"
+                     Grid.Row="1"
+                     Grid.Column="2"/>
+           
+
+
+        </Grid>
+
+
+        <StackLayout BackgroundColor="LightBlue" Padding="30">
+
+            <Button 
+                 x:Name="btnInicio"
+                  Text="Iniciar Sesión"
+                  Clicked="btnInicio_Clicked_1"
+                  TextColor="Black"
+                  BackgroundColor="White" 
+                  WidthRequest="150"               
+                 />
+
+        </StackLayout>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

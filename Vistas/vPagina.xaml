@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen1GPaucar.Vistas.vPagina"
+             BackgroundColor="WhiteSmoke">
+    <VerticalStackLayout>
+       
+        
+        <StackLayout BackgroundColor="LightBlue" Padding="20">
+            <Image Source="fondo.png"
+               HeightRequest="100"/>
+            <Label 
+                 Text="Registro de Estudiantes "
+                FontSize="Medium"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center"
+                 TextColor="Black"/>
+            
+            <Label x:Name="lblUsuario"
+                TextColor="Blue"
+                FontSize="13"
+                HorizontalTextAlignment="Start"
+               />
+            
+        </StackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                
+            </Grid.ColumnDefinitions>
+
+            <Label 
+              Text="Nombre:"
+              HorizontalTextAlignment="Start"
+              FontSize="15"
+              TextColor="Black"            
+             Grid.Row="0"
+             Grid.Column="1"
+             />
+
+            <Entry x:Name="txtNombre" 
+             BackgroundColor="WhiteSmoke"
+             Placeholder="Nombre"
+             TextColor="Black"                  
+             Grid.Row="1"
+             Grid.Column="1"
+             />
+
+
+
+            <Label 
+               Text="Apellido:"
+                HorizontalTextAlignment="Start"
+                FontSize="15"
+                TextColor="Black"            
+                Grid.Row="0"
+                 Grid.Column="2"
+              />
+
+            <Entry x:Name="txtApellido" 
+                 BackgroundColor="WhiteSmoke"
+                 Placeholder="Apellido"
+                 TextColor="Black"                  
+                 Grid.Row="1"
+                 Grid.Column="2"
+             />
+
+
+
+            <Label 
+               Text="Edad:"
+                HorizontalTextAlignment="Start"
+                FontSize="15"
+              
+                TextColor="Black"  
+                 Grid.Row="0"
+                 Grid.Column="3"
+              />
+
+            <Entry x:Name="txtEdad" 
+                 BackgroundColor="WhiteSmoke"
+                 Keyboard="Numeric" 
+                 Placeholder="00"
+                 TextColor="Black"                  
+                 Grid.Row="1"
+                 Grid.Column="3"
+             />
+        </Grid>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+
+
+            <Label 
+               Text="Fecha:"
+                HorizontalTextAlignment="Start"
+                FontSize="15"
+                TextColor="Black"            
+                Grid.Row="0"
+                 Grid.Column="0"
+              />
+
+            
+            
+            <DatePicker  x:Name="datePicker" HorizontalOptions="Center" TextColor="Black" BackgroundColor="White"  Grid.Row="0" Grid.Column="1"/>
+
+
+            <Label 
+             Text="Pais:"
+             HorizontalTextAlignment="Start"
+             FontSize="15"
+             TextColor="Black"            
+             Grid.Row="1"
+              Grid.Column="0"
+             />
+
+            <Picker x:Name="pkseleccion" Title="Seleccione:" TitleColor="Black" TextColor="Black" BackgroundColor="White"  Grid.Row="1" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Ecuador</x:String>
+                    <x:String>Colombia</x:String>
+                    <x:String>Peru</x:String>
+                    
+                </Picker.Items>
+            </Picker>
+
+
+            <Label 
+                Text="Ciudad:"
+                HorizontalTextAlignment="Start"
+                FontSize="15"
+                TextColor="Black"            
+                Grid.Row="2"
+                 Grid.Column="0"
+              />
+
+            <Picker x:Name="pkseleccionCiudad" Title="Seleccione:" TitleColor="Black" TextColor="Black" BackgroundColor="White"  Grid.Row="2" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Quito</x:String>
+                    <x:String>Cuenca</x:String>
+                    <x:String>Ambato</x:String>
+
+                </Picker.Items>
+            </Picker>
+
+
+            <Label 
+                 Text="Monto $:"
+                  HorizontalTextAlignment="Start"
+                  FontSize="15"       
+                 TextColor="Black"  
+                   Grid.Row="3"
+                   Grid.Column="0"
+             />
+
+            <Entry x:Name="txtMonto" 
+              BackgroundColor="White"
+              Keyboard="Numeric" 
+              Placeholder="$$$"
+             TextColor="Black"                  
+             Grid.Row="3"
+              Grid.Column="1"
+           />
+
+
+            <Label 
+                 Text="Pago Mes $:"
+                  HorizontalTextAlignment="Start"
+                  FontSize="15"       
+                 TextColor="Black"  
+                   Grid.Row="4"
+                   Grid.Column="0"
+             />
+
+
+            <Entry x:Name="txtPagoMes" 
+                Placeholder="$$$"
+                BackgroundColor="White"
+                TextColor="Black"
+                Keyboard="Numeric"            
+                Grid.Row="4"
+                Grid.Column="1"      
+            />
+
+
+
+
+
+        </Grid>      
+
+
+
+        <StackLayout BackgroundColor="LightBlue" Padding="50">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button 
+                  x:Name="btnCalcular"
+                   Text="Calcular"
+                   Clicked="btnCalcular_Clicked"
+                TextColor="Black"
+                 BackgroundColor="LightGray"
+                 WidthRequest="90"  
+                 Grid.Row="0"
+                Grid.Column="1"   
+                 />
+
+
+                <Button 
+                   x:Name="btnResumen"
+                   Text="Resumen"
+                  Clicked="btnResumen_Clicked"
+                  TextColor="Black"
+                  BackgroundColor="LightGray"
+                   WidthRequest="90"  
+                 Grid.Row="0"
+                  Grid.Column="2"   
+             />
+
+
+            </Grid>
+        </StackLayout>
+
+
+    </VerticalStackLayout>
+</ContentPage>
